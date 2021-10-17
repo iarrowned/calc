@@ -1,16 +1,8 @@
 from math import exp, cos, pow
 
 
-check = False
-while not check:
-    try:
-        n: int = int(input("Enter positive int n > "))
-        x: float = float(input("Enter x > "))
-        if n < 0:
-            raise ValueError
-        check = True
-    except ValueError:
-        print("Enter correct values")
+n = int(input("Enter positive int n > "))
+x = float(input("Enter x > "))
 
 
 def multiplier(nn, xx):
