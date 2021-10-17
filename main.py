@@ -1,21 +1,5 @@
 from math import exp, cos, pow
 
-""" 
-    Inputs: 
-    n: positive int
-    x: float or int
-"""
-check: bool = False
-while not check:
-    try:
-        n: int = int(input("Enter positive int n > "))
-        x: float = float(input("Enter x > "))
-        if n < 0:
-            raise ValueError
-        check = True
-    except ValueError:
-        print("Enter correct values")
-
 
 def multiplier(nn: int, xx: float) -> float:
     """
@@ -29,5 +13,22 @@ def multiplier(nn: int, xx: float) -> float:
     return p
 
 
-result: float = pow(n, 1 / 3) * pow(x, 1 / 2) - multiplier(n, x)
-print(result)
+if __name__ == '__main__':
+    """ 
+        Inputs: 
+        n: positive int
+        x: float or int
+    """
+    check: bool = False
+    while not check:
+        try:
+            n: int = int(input("Enter positive int n > "))
+            x: float = float(input("Enter x > "))
+            if n < 0:
+                raise ValueError
+            check = True
+        except ValueError:
+            print("Enter correct values")
+
+    result: float = pow(n, 1 / 3) * pow(x, 1 / 2) - multiplier(n, x)
+    print(result)
